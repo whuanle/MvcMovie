@@ -33,7 +33,7 @@ namespace MvcMovie.Migrations
 
                     b.Property<string>("Title");
 
-                    b.Property<decimal>("price");
+                    b.Property<decimal>("Price");
 
                     b.HasKey("ID");
 
