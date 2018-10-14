@@ -19,9 +19,38 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index()
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
         {
-            return View(await _context.Movie.ToListAsync());
+            return "From [HttpPost]Index: filter on " + searchString;
+        }
+
+        // Requires using Microsoft.AspNetCore.Mvc.Rendering;
+        public async Task<IActionResult> Index(string movieGenre, string searchString)
+        {
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Movie
+                                            orderby m.Genre
+                                            select m.Genre;
+
+            var movies = from m in _context.Movie
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.Title.Contains(searchString));
+            }
+
+            if (!String.IsNullOrEmpty(movieGenre))
+            {
+                movies = movies.Where(x => x.Genre == movieGenre);
+            }
+
+            var movieGenreVM = new MovieGenreViewModel();
+            movieGenreVM.genres = new SelectList(await genreQuery.Distinct().ToListAsync());
+            movieGenreVM.movies = await movies.ToListAsync();
+
+            return View(movieGenreVM);
         }
 
         // GET: Movies/Details/5
@@ -29,17 +58,17 @@ namespace MvcMovie.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return NotFound();  //返回404
             }
 
             var movie = await _context.Movie
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (movie == null)
+                .FirstOrDefaultAsync(m => m.ID == id);     //返回按id条件查找结果中的第一个元素(一条结果)
+            if (movie == null)   //按id查找不到结果
             {
-                return NotFound();
+                return NotFound();  //返回404
             }
 
-            return View(movie);
+            return View(movie);   //如果查找成功，就向视图传递数据模型
         }
 
         // GET: Movies/Create
