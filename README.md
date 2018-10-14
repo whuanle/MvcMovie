@@ -10,7 +10,7 @@ https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/?view=aspne
 
 (1)vs 2017 下使用PMC
 [![英文](https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/adding-model/_static/pmc.png?view=aspnetcore-2.1 "英文")](https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/adding-model/_static/pmc.png?view=aspnetcore-2.1 "英文")
-
+---
 在 PMC 中，输入以下命令：
 `Add-Migration Initial  `
 `Update-Database`
