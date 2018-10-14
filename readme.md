@@ -8,3 +8,5 @@ https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/?view=aspne
 ------------------------------
 初始化数据库构架
 项目使用了EF，无需自己在数据库建表
+
+(1)
