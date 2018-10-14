@@ -4,6 +4,7 @@ https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/?view=aspne
 
 该项目为 [**创建 MVC Web 应用**] 这一章节的源代码
 
+做完该章节的教程后，最后的代码即为本代码库的代码。
 ------------------------------
 ### **初始化数据库构架**
 项目使用了EF，无需自己在数据库建表
