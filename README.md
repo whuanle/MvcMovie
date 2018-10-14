@@ -12,7 +12,7 @@ https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/?view=aspne
 [![英文](https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/adding-model/_static/pmc.png?view=aspnetcore-2.1 "英文")](https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/adding-model/_static/pmc.png?view=aspnetcore-2.1 "英文")
 ---
 在 PMC 中，输入以下命令：
-`Add-Migration Initial  `
+`Add-Migration Initial`  
 `Update-Database`
 
 ----
@@ -23,5 +23,5 @@ https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/?view=aspne
 还可以使用命令行接口 (CLI) 来执行前面的步骤，而不使用 PMC：
 将 EF Core 工具添加到 .csproj 文件。
 从控制台（在项目目录中）运行以下命令：
-`dotnet ef migrations add Initial`
+`dotnet ef migrations add Initial`  
 `dotnet ef database update`
