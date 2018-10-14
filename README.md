@@ -11,7 +11,7 @@ https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/?view=aspne
 (1)vs 2017 下使用PMC
 [![英文](https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/adding-model/_static/pmc.png?view=aspnetcore-2.1 "英文")](https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/adding-model/_static/pmc.png?view=aspnetcore-2.1 "英文")
 ---
-在 PMC 中，输入以下命令：
+在 PMC 中，输入以下命令：  
 `Add-Migration Initial`  
 `Update-Database`
 
@@ -22,6 +22,6 @@ https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/first-mvc-app/?view=aspne
 `Update-Database `命令在用于创建数据库的 Migrations/<time-stamp>_Initial.cs 文件中运行 Up 方法。
 还可以使用命令行接口 (CLI) 来执行前面的步骤，而不使用 PMC：
 将 EF Core 工具添加到 .csproj 文件。
-从控制台（在项目目录中）运行以下命令：
+从控制台（在项目目录中）运行以下命令：  
 `dotnet ef migrations add Initial`  
 `dotnet ef database update`
